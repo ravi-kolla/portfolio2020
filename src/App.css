@@ -21,16 +21,7 @@ h2 {
 p {
   font-size: 16px;
 }
-a {
-  border-bottom: 1px solid white;
-  color: #0076ff;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-a:hover {
-  border-bottom: 1px solid #0076ff;
-}
+
 code,
 pre {
   color: #d400ff;
@@ -41,4 +32,26 @@ pre {
 code:before,
 code:after {
   content: '\`';
+}
+.gallery-images {
+  height:275px;
+}
+.fa {
+  padding: 11px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  text-decoration: none;
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
 }
