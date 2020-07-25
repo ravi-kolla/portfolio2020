@@ -2,7 +2,7 @@ import React from 'react';
 
 function Resume() {
   return (
-    <div class="container">
+    <div class="container  text-light">
     <div class="container-fluid">
     <section class="resume-section d-flex justify-content-center" id="experience">
       <div class="w-100">

@@ -15,14 +15,14 @@ function Header() {
 
   return(
     <Router>
-    <div className="bg-white border-bottom shadow-sm mb-3 sticky-top">
+    <div className="my-nav shadow-sm mb-3 sticky-top">
       <div className="container d-flex flex-column flex-md-row align-items-center p-3 px-md-4">
-        <h5 className="my-0 mr-md-auto font-weight-normal">Ravi Teja Kolla</h5>
-        <nav className="my-2 my-md-0 mr-md-3">
-        <Link className="p-2 text-dark" to="/">Home</Link>
-        <Link className="p-2 text-dark" to="/resume">Resume</Link>
-        <Link className="p-2 text-dark" to="/photos">Photos</Link>
-        <Link className="p-2 text-dark" to="/contact">Contact</Link>
+        <h5 className="col-sm-12 text-sm-center text-md-left col-md-6 my-0 mr-md-auto font-weight-normal text-light">Ravi Teja Kolla</h5>
+        <nav className="col-md-6 text-center my-2 my-md-0">
+        <Link className="p-2 text-light" to="/">Home</Link>
+        <Link className="p-2 text-light" to="/resume">Resume</Link>
+        <Link className="p-2 text-light" to="/photos">Photos</Link>
+        <Link className="p-2 text-light" to="/contact">Contact</Link>
         </nav>
       </div>
     </div>

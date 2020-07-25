@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+
 main {
   align-content: center;
   box-sizing: border-box;
   display: grid;
-  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;
+  font-family: "Rubik", sans-serif;
   hyphens: auto;
   line-height: 1.65;
   margin: 0 auto;
@@ -13,7 +14,19 @@ main {
   text-align: center;
 }
 h1 {
-  font-size: 45px;
+  font-size: 4.5rem;
+}
+.title {
+  font-weight: 400;
+}
+.image-container {
+  text-align: center;
+}
+.full-height {
+  min-height: 100%;
+}
+.my-nav {
+  background-color: #191a1d;
 }
 h2 {
   margin-top: 1.5em;

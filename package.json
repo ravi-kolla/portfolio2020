@@ -1,16 +1,18 @@
 {
-  "name": "create-react-app",
-  "version": "0.1.0",
+  "name": "RaviTejaKolla",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.4.1",
+    "cross-env": "^7.0.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "2.1.1"
+    "react-scripts": "^2.1.1",
+    "react-smart-card": "^0.3.2"
   },
   "scripts": {
-    "dev": "BROWSER=none react-scripts start",
+    "dev": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
