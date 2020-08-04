@@ -7,6 +7,7 @@
     "cross-env": "^7.0.2",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
+    "react-onclickoutside": "^6.9.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^2.1.1",
     "react-smart-card": "^0.3.2"

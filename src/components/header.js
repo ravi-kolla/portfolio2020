@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import onClickOutside from "react-onclickoutside";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,19 +14,29 @@ import Contact from './contact';
 
 function Header() {
 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  Header.handleClickOutside = () => setIsOpen(false);
   return(
     <Router>
-    <div className="my-nav shadow-sm mb-3 sticky-top">
-      <div className="container d-flex flex-column flex-md-row align-items-center p-3 px-md-4">
-        <h5 className="col-sm-12 text-sm-center text-md-left col-md-6 my-0 mr-md-auto font-weight-normal text-light">Ravi Teja Kolla</h5>
-        <nav className="col-md-6 text-center my-2 my-md-0">
-        <Link className="p-2 text-light" to="/">Home</Link>
-        <Link className="p-2 text-light" to="/resume">Resume</Link>
-        <Link className="p-2 text-light" to="/photos">Photos</Link>
-        <Link className="p-2 text-light" to="/contact">Contact</Link>
-        </nav>
-      </div>
-    </div>
+    <nav className="container navbar navbar-expand-lg navbar-dark sticky-top mb-3">
+      <div className="container">
+        <a className="navbar-brand font-weight-normal text-light" href="/">Ravi Teja Kolla</a>
+        <button onClick={toggle} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded={isOpen ? 'true' : 'false'}  aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNavAltMarkup">
+          <div className="mr-auto navbar-nav"></div>
+          <div className="navbar-nav">
+            <a className="nav-link text-light" href="/">Home</a>
+            <a className="nav-link text-light" href="/resume">Resume</a>
+            <a className="nav-link text-light" href="/photos">Photography</a>
+            <a className="nav-link text-light" href="/contact">Contact Me</a>
+          </div>
+        </div>
+        </div>
+    </nav>
+
     <Switch>
         <Route exact path="/">
           <Author />
@@ -44,4 +55,8 @@ function Header() {
   )
 }
 
-export default Header;
+const clickOutsideConfig = {
+  handleClickOutside: () => Header.handleClickOutside
+};
+
+export default onClickOutside(Header, clickOutsideConfig);

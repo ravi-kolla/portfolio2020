@@ -68,3 +68,9 @@ code:after {
   background: #007bb5;
   color: white;
 }
+.navbar {
+  background-color: #191a1d;
+}
+.footer-content {
+  text-align: center;
+}
